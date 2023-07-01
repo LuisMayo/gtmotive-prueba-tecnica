@@ -1,0 +1,16 @@
+cdk-virtual-scroll-viewport {
+    height: 100%;
+}
+
+mat-grid-tile {
+    background-color: lightblue;
+}
+
+.initial-margin {
+    margin: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}

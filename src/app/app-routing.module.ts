@@ -1,10 +1,16 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { MakeListComponent } from './components/make-list/make-list.component';
+import { ModelListComponent } from './components/model-list/model-list.component';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  { path: '', pathMatch: 'full', component: MakeListComponent },
+  { path: 'make/:id', component: ModelListComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

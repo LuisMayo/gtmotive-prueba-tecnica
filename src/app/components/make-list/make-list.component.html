@@ -1,0 +1,19 @@
+<!-- {{makes | async | json}} -->
+<form class="initial-margin">
+  <mat-form-field>
+    <mat-label>Make name</mat-label>
+    <input matInput placeholder="Audi" (input)="onFilter($event)" />
+  </mat-form-field>
+</form>
+<cdk-virtual-scroll-viewport itemSize="50">
+  <mat-grid-list cols="2" rowHeight="3:1">
+    <mat-grid-tile
+      *cdkVirtualFor="let make of makes | async"
+      [routerLink]="'make/' + make.Make_ID"
+    >
+      <mat-card>
+        <mat-card-content>{{ make.Make_Name }}</mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</cdk-virtual-scroll-viewport>
