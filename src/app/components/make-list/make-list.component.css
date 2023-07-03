@@ -1,5 +1,11 @@
-cdk-virtual-scroll-viewport {
+:host {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+cdk-virtual-scroll-viewport {
+    flex: 1;
 }
 
 mat-grid-tile {
